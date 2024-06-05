@@ -1,3 +1,6 @@
+# QUICKSTART
+If you are not a developer, you can download the click-and-run version here (Windows only).
+
 # REQUIREMENTS
 Users must have python3 installed before running the program. After that, use below command to install required packages:
 `pip install -r path/to/requirements.txt`
