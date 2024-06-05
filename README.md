@@ -1,5 +1,9 @@
 # QUICKSTART
-If you are not a developer, you can download the click-and-run version here (Windows only).
+If you are not a developer, you can download the click-and-run version [here (Windows only)](https://drive.google.com/file/d/11C3GbLf8l_F6QkSPfyh1_IKU7-q4GNfJ/view?usp=drive_link).
+
+Notes:
+* Your computer might warn you this is a dangerous program (because I write it myself and yet have no certificate), you need to choose **Run Anyway** to make the the program start. You can find the source of program in this repo.
+* The program runs as a command line, you will have to wait about 30 seconds for loading, so please be patient.
 
 # REQUIREMENTS
 Users must have python3 installed before running the program. After that, use below command to install required packages:
