@@ -1,5 +1,5 @@
 from youtube_transcript_api import YouTubeTranscriptApi as transTool
-from pytube import Playlist, YouTube
+from pytubefix import Playlist, YouTube
 import os
 import argparse
 from tqdm import tqdm
