@@ -10,15 +10,24 @@ def downloadTranscript(subject, video):
     title = video.title.replace(":", "")
     video_id = video.video_id
 
-    try:
-        transcript = transTool.get_transcript(video_id, languages=[language, 'vi', 'en'])
-        transcript_text = ' '.join(element['text'] for element in transcript)
+    attempts = 0
+    success = False
+    while attempts < 3 and not success:
+        try:
+            transcript = transTool.get_transcript(video_id, languages=[language, 'vi', 'en'])
+            transcript_text = ' '.join(element['text'] for element in transcript)
 
-        with open(os.path.join(subject, title + ".txt"), "w", encoding='utf-8') as f:
-            f.write(transcript_text)
-    except:
+            with open(os.path.join(subject, title + ".txt"), "w", encoding='utf-8') as f:
+                f.write(transcript_text)
+            success = True
+        except Exception:
+            print(f"Khong tai duoc transcript cho video {title}. Thu lai lan thu {attempts + 1}...")
+            attempts += 1
+
+    if not success:
+        print(f"Video {title} bi loi! Tai transcript khong thanh cong sau 3 lan thu.")
         with open("LUU Y.txt", "a", encoding='utf-8') as note:
-            note.write("Video " + title + "bi loi! Tai transcript khong thanh cong\n")
+            note.write(f"Video {title} bi loi! Tai transcript khong thanh cong sau 3 lan thu.\n")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Download YouTube video transcript')
