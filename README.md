@@ -11,11 +11,11 @@ Users must have python3 installed before running the program. After that, use be
 
 # USAGE
 Open terminal and run below command:
-`python path/to/utube_trans.py`
+`python path/to/YoutubeTranscriptDownloader.py`
 
 Input:
 `Subject name`
 `Playlist URL`
 `Language to download`
 
-Wait for the scripts doing its jobs! :)
+Wait for the script doing its jobs! :)
